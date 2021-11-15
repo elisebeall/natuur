@@ -4,7 +4,7 @@ header {
   align-items: center;
 }
 
-.natuur-logo {
+.image {
   grid-column-start: 1;
   grid-column-end: 1;
 }
