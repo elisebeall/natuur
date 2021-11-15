@@ -1,24 +1,38 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import useFetch from './useFetch';
+import Header from './components/Header';
+import VideosContainer from './components/VideosContainer';
+import Footer from './components/Footer';
+import { endpoints } from './endpoints.js';
 import './App.css';
 
-function App() {
+const App = () => {
+  const { dataState: videos, isLoadingState, errorState } = useFetch(endpoint.default);
+  const [ searchState, setSearchState ] = useState('');
+
+  const searchWebcams = (searchState) => {
+    const { dataState: searchedVideos, isLoadingState, errorState } = useFetch(`${endpoint.search}"${searchState}"`);
+  }
+
+  useEffect(() => {
+    searchWebcams(searchState);
+  }, [searchState]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Search searchTerm={searchState} setSearchState={setSearchState} />
+      {isLoadingState && <Loading />}
+      <Switch>
+        {error && <Error/>}
+        {searchedVideos.length ?
+          <Route exact path="/?search=`${searchState}`" component={VideosContainer videos={searchedVideos}} /> :
+          <Route exact path="/" component={VideosContainer videos={videos}} /> ;
+        }
+      </Switch>
+      <Footer />
+    </>
   );
 }
 
