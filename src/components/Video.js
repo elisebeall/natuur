@@ -1,24 +1,24 @@
 import React, { useTimeout, useState, Fragment } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import endpoints from '../useEndpoints';
+import placeholder from '../assets/error.png';
 //import defaultScreenshot from './assets/Lake-McDonald.png';
 //<img src={defaultScreenshot} alt="Lake-McDonald"/>
 import '../css/Video.css';
 
-const Video = (video) => {
-  const [currentVideoState, setCurrentVideoState] = useState(null);
+const Video = ({ video }) => {
+  console.log('video', video)
 
-  useTimeout(() => {
-    setCurrentVideoState(video);
-  }, 60000);
+  let defaultImg = video.images[0];
+
+  console.log('defaultImg', defaultImg)
 
   return (
     <>
       <iframe
-        src={currentVideoState.url}
-        value={currentVideoState.url}
-        height="100%"
-        width="100%"
+        title={video.title}
+        src={video.url}
+        value={video.url}
       />
     </>
   );

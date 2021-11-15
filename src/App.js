@@ -7,38 +7,18 @@ import Error from './components/Error';
 import Loading from './components/Loading';
 import VideosContainer from './components/VideosContainer';
 import Footer from './components/Footer';
-import { endpoints, apiKey } from './useEndpoints.js';
+import natuurLogo from './assets/natuur-logo.png';
+import endpoints from './endpoints.js';
 import './App.css';
 
 const App = () => {
-  const { dataState: videos, isLoadingState, errorState } = useFetch(`${endpoints.base}${endpoints.default}${endpoints.apiKey}`);
-  const [ searchState, setSearchState ] = useState('');
-
-  const searchWebcams = (searchState) => {
-  }
-
-  const { dataState: searchedVideos, isLoadingState: searchedLoading, errorState: searchedError } = useFetch(`${endpoints.search}"${searchState}"`);
-
-  useEffect(() => {
-    searchWebcams(searchState);
-  }, [searchState]);
+  // const { dataState: videos, isLoadingState, errorState } = useFetch(`${endpoints.base}${endpoints.limit}${endpoints.apiKey}`);
+  // console.log('app videos', videos);
 
   return (
     <main>
       <Header />
-      <Search searchTerm={searchState} setSearchState={setSearchState} />
-      <Switch>
-        {isLoadingState && <Loading />}
-        {errorState && <Error />}
-        {searchState.length ?
-          <Route path={`/?search=${searchState}`}>
-            <VideosContainer videos={searchedVideos} />
-          </Route> :
-          <Route exact path="/">
-            <VideosContainer videos={videos} />
-          </Route>
-        }
-      </Switch>
+      <Search />
       <Footer />
     </main>
   );

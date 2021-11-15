@@ -1,12 +1,8 @@
-header {
-  display: grid;
-  grid-template-columns: 4;
-  align-items: center;
-}
-
-.image {
+img {
+  height: 100%;
+  /* width: 200px;
   grid-column-start: 1;
-  grid-column-end: 1;
+  grid-column-end: 1; */
 }
 
 .search {
