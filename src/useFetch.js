@@ -1,4 +1,4 @@
-import React, { setState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const useFetch = (endpoint) => {
   const [dataState, setDataState] = useState(null);
