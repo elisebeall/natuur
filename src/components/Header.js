@@ -1,8 +1,8 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 //import Search from './components/Search';
-import natuurLogo from './assets/natuur-logo.png';
-import './components/Header.css';
+import natuurLogo from '../assets/natuur-logo.png';
+import '../css/Header.css';
 
 const Header = () => {
   return (

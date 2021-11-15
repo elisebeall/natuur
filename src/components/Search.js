@@ -1,8 +1,9 @@
-import React, { getState } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import './components/Video.css';
+import '../css/Search.css';
 
 const Search = ({ searchState, setSearchState }) => {
+
   const handleChange = (e) => {
     setSearchState(e.target.value);
   }
@@ -17,4 +18,4 @@ const Search = ({ searchState, setSearchState }) => {
   );
 }
 
-export default Video;
+export default Search;

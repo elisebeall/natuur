@@ -1,25 +1,22 @@
-import React, { useEffect } from 'react';
-
-
-export const apiKey = 'WWBfRf37fletVxvN9jVhqlrhofEwnhtHPbhuAhxP';
-export let limit = 20;
+//import React, { useEffect } from 'react';
+//export let limit = 20;
 export let defaultWebcamId = '81B4690A-1DD8-B71B-0B2D069E1CB02E6A';
 //export let randomWebcam = '';
 //Would be nice to be able to show a random webcam without fetching the entire dataset
 
 export const endpoints = {
-  base: 'https://developer.nps.gov/api/v1/',
-  endpoint: 'webcams', // could make value dynamic, so the user could view other endpoints
-  default: `${endpoints.base}${endpoints.endpoint}/?id="${defaultWebcamId}"`,
-  search: `${endpoints.base}${endpoints.endpoint}/?p=`
+  base: 'https://developer.nps.gov/api/v1/webcams',
+  default: `?id=${defaultWebcamId}`,
+  search: '?p=',
+  apiKey: '&api_key=WWBfRf37fletVxvN9jVhqlrhofEwnhtHPbhuAhxP'
 }
 
-const useEndpoints = (searchState) => {
-  useEffect(() => {
-    fetch(enpoints.search)
-  })
+// const useEndpoints = (searchState) => {
+//   useEffect(() => {
+//     fetch(endpoints.search)
+//   })
+//
+//   return { searchEndpoint };
+// };
 
-  return { searchEndpoint };
-};
-
-export default useEndpoints;
+//export default useEndpoints;
