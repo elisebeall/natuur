@@ -1,11 +1,14 @@
-img {
-  height: 100%;
-  /* width: 200px;
-  grid-column-start: 1;
-  grid-column-end: 1; */
+.header {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50% 50%;
+  border: 5px solid black;
 }
 
-.search {
-  grid-column-start: 2;
-  grid-column-end: 4;
+.natuurImage {
+  grid-row: 1;
+}
+
+.natuurText {
+  grid-row: 2;
 }

@@ -9,8 +9,8 @@ import '../css/Header.css';
 const Header = () => {
   return (
     <>
-      <img src={natuurImg} alt="natuur logo: gold circle with northeast pointing deep green arrow overlay" />
-      <img src={natuurText} alt="natuur" />
+      <img className="natuurImage" src={natuurImage} alt="natuur logo: gold circle with northeast pointing deep green arrow overlay" />
+      <img className="natuurText" src={natuurText} alt="natuur" />
     </>
   );
 }

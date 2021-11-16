@@ -1,6 +1,6 @@
 import React, { useTimeout, useState, Fragment } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import endpoints from '../useEndpoints';
+import { endpoints } from '../endpoints';
 import placeholder from '../assets/error.png';
 //import defaultScreenshot from './assets/Lake-McDonald.png';
 //<img src={defaultScreenshot} alt="Lake-McDonald"/>

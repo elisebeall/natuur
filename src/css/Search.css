@@ -1,5 +1,14 @@
-input {
-  width: 60%;
-  background: none;
+.search {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row: 1 / 1;
+}
+
+input:not([type=submit]){
+  height: 100%;
+  width: 80%;
+  background: #DBA40E;
   border: none;
+  border-radius: 50px;
+  padding: 3% 0 3% 5%;
 }

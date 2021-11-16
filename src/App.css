@@ -1,18 +1,20 @@
 main {
+  background-color: white;
   height: 100%;
-  width: 100%;
+  margin: 5px;
   display: grid;
-  grid-template-columns: 33% 33% 33%;
-  grid-template-rows: minmax(30%, auto);
+  grid-gap: 1em;
+  grid-template-columns: 33% 67%;
+  grid-template-rows: minmax(35%, auto);
   align-items: center;
+  border: 1px solid black;
+  border-radius: 8px;
 }
 
-header {
-  grid-column-start: 1;
-  grid-column-end: 3;
+a {
+  color: black;
 }
 
-.searchBar {
-  grid-column-start: 2;
-  grid-column-end: 4;
+a:visited {
+  color: black;
 }
