@@ -1,0 +1,174 @@
+[
+  {
+    "id": "C734932D-DB0B-467A-82DB-6D6A3873BC6A",
+    "url": "https://www.nps.gov/media/webcam/view.htm?id=81B46AB6-1DD8-B71B-0B12AA5101C4657E",
+    "title": "Visitor Center",
+    "description": "View from the Saddlehorn Visitor Center on Rim Rock Drive. On most days a small sliver of the visitor center roof is in the foreground, beyond that are the red rock cliffs of Wedding and Monument canyons. On a clear day, in the distance, one can see the Grand Mesa (one of the largest flat-topped mountains in the United States).",
+    "images": [
+      {
+        "url": "https://www.nps.gov/common/uploads/cropped_image/BDB20F0C-C6FC-67C0-1167C5015531E4C6.jpg",
+        "credit": "NPS Photo - LHartman",
+        "altText": "Canyon with tan and red rock walls. Snow capped, flat topped mountain in distance.",
+        "title": "Wedding Canyon",
+        "description": "",
+        "caption": "View of Wedding Canyon with Grand Mesa in the Distance.",
+        "crops": [
+          {
+            "aspectRatio": 1.78,
+            "url": "https://www.nps.gov/common/uploads/cropped_image/primary/BDB20F0C-C6FC-67C0-1167C5015531E4C6.jpg"
+          },
+          {
+            "aspectRatio": 1.33,
+            "url": "https://www.nps.gov/common/uploads/cropped_image/secondary/BDB20F0C-C6FC-67C0-1167C5015531E4C6.jpg"
+          }
+        ]
+      }
+    ],
+    "relatedParks": [
+      {
+        "states": "CO",
+        "parkCode": "colm",
+        "designation": "National Monument",
+        "fullName": "Colorado National Monument",
+        "url": "https://www.nps.gov/colm/index.htm",
+        "name": "Colorado"
+      }
+    ],
+    "status": "Active",
+    "statusMessage": "",
+    "isStreaming": false,
+    "tags": [
+      "Web Cam",
+      "Colorado National Monument"
+    ],
+    "latitude": 39.10116958618164,
+    "longitude": -108.73451232910156
+  },
+  {
+    "id": "8F3E54DC-5638-4544-9326-3889909FCEEC",
+    "url": "https://www.nps.gov/media/webcam/view.htm?id=81B467C8-1DD8-B71B-0BFA5D679D77738C",
+    "title": "Hite Scenic View",
+    "description": "A view toward the Colorado River from the Glen Canyon ranger station at Hite, Utah.",
+    "images": [
+      {
+        "url": "https://www.nps.gov/common/uploads/cropped_image/B529C963-D6C1-A26B-C082FDD784E37B01.jpg",
+        "credit": "NPS",
+        "altText": "sandstone cliffs",
+        "title": "Hite Webcam",
+        "description": "",
+        "caption": "February 2020 screenshot from Hite Ranger Station Webcam",
+        "crops": [
+          {
+            "aspectRatio": 1.78,
+            "url": "https://www.nps.gov/common/uploads/cropped_image/primary/B529C963-D6C1-A26B-C082FDD784E37B01.jpg"
+          },
+          {
+            "aspectRatio": 1.33,
+            "url": "https://www.nps.gov/common/uploads/cropped_image/secondary/B529C963-D6C1-A26B-C082FDD784E37B01.jpg"
+          }
+        ]
+      }
+    ],
+    "relatedParks": [
+      {
+        "states": "AZ,UT",
+        "parkCode": "glca",
+        "designation": "National Recreation Area",
+        "fullName": "Glen Canyon National Recreation Area",
+        "url": "https://www.nps.gov/glca/index.htm",
+        "name": "Glen Canyon"
+      }
+    ],
+    "status": "Active",
+    "statusMessage": "",
+    "isStreaming": false,
+    "tags": [
+      "webcam",
+      "Hite",
+      "Lake Powell",
+      "Colorado River",
+      "scenery",
+      "sandstone",
+      "desert",
+      "cliffs"
+    ],
+    "latitude": 37.5255012512207,
+    "longitude": -110.7057113647461
+  },
+  {
+    "id": "FE6EB8EC-80D4-4B8B-A492-E1F1055EAF7A",
+    "url": "https://www.nps.gov/media/webcam/view.htm?id=81B467B9-1DD8-B71B-0BA34037897F857D",
+    "title": "Paria Overlook",
+    "description": "A view from the Paria Plateau towards Lees Ferry launch ramp, downstream from Lake Powell on the Colorado River in northern Arizona. The image will update every 10 minutes.",
+    "images": [
+      {
+        "url": "https://www.nps.gov/common/uploads/cropped_image/B53EB9E1-F430-B84B-25E382D73AA10AD6.jpg",
+        "credit": "NPS",
+        "altText": "landscape, sandstone canyon, sky",
+        "title": "Paria Overlook Webcam",
+        "description": "",
+        "caption": "February 2020 screenshot from Paria Overlook Webcam",
+        "crops": [
+          {
+            "aspectRatio": 1.78,
+            "url": "https://www.nps.gov/common/uploads/cropped_image/primary/B53EB9E1-F430-B84B-25E382D73AA10AD6.jpg"
+          },
+          {
+            "aspectRatio": 1.33,
+            "url": "https://www.nps.gov/common/uploads/cropped_image/secondary/B53EB9E1-F430-B84B-25E382D73AA10AD6.jpg"
+          }
+        ]
+      }
+    ],
+    "relatedParks": [
+      {
+        "states": "AZ,UT",
+        "parkCode": "glca",
+        "designation": "National Recreation Area",
+        "fullName": "Glen Canyon National Recreation Area",
+        "url": "https://www.nps.gov/glca/index.htm",
+        "name": "Glen Canyon"
+      }
+    ],
+    "status": "Active",
+    "statusMessage": "",
+    "isStreaming": false,
+    "tags": [
+      "webcam",
+      "Colorado River",
+      "Lees Ferry",
+      "Glen Canyon National Recreation Area",
+      "grand canyon national park",
+      "scenery",
+      "Navajo Bridge",
+      "canyon",
+      "sandstone",
+      "plateau"
+    ],
+    "latitude": 36.882564544677734,
+    "longitude": -111.5875473022461
+  },
+  {
+    "id": "6417A360-EFF1-4353-AAA9-C2BDB37A12CA",
+    "url": "https://www.nps.gov/media/webcam/view.htm?id=81B4682A-1DD8-B71B-0BBC127D2E00ACD9",
+    "title": "Kawuneeche Valley",
+    "description": "Located on the west side of Rocky Mountain National Park one-half mile from the Grand Lake Entrance Station, Harbison Meadow in the Kawuneeche Valley teems with wildlife and wildflowers. The Never Summer Mountains look down on the headwaters of the Colorado River in this view of the Kawuneeche Valley.",
+    "images": [],
+    "relatedParks": [
+      {
+        "states": "CO",
+        "parkCode": "romo",
+        "designation": "National Park",
+        "fullName": "Rocky Mountain National Park",
+        "url": "https://www.nps.gov/romo/index.htm",
+        "name": "Rocky Mountain"
+      }
+    ],
+    "status": "Active",
+    "statusMessage": "",
+    "isStreaming": false,
+    "tags": [],
+    "latitude": 40.3554801940918,
+    "longitude": -105.69711303710938
+  }
+]

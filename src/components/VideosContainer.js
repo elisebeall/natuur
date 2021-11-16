@@ -32,11 +32,11 @@ const VideosContainer = ({ searchTerm }) => {
   // }
 
   return (
-    <>
+    <div className="videosContainer">
       {isLoadingState && <Loading />}
       {errorState && <Error error={errorState} />}
       {getActiveVideos()}
-    </>
+    </div>
   );
 }
 

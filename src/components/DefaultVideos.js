@@ -12,12 +12,14 @@ const DefaultVideos = () => {
   const string = "Colorado";
   const { dataState: defaultVids, isLoadingState, errorState } = useFetch(`${endpoints.base}${endpoints.search}${string}${endpoints.apiKey}`);
 
+  console.log(`${endpoints.base}${endpoints.search}${string}${endpoints.apiKey}`);
+
   return (
-    <>
+    <div className="defaultVids">
       {isLoadingState && <Loading />}
       {errorState && <Error error={errorState} />}
       {defaultVids.data.map(video => <Video videos={video} />)}
-    </>
+    </div>
   );
 }
 
