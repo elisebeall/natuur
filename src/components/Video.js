@@ -1,5 +1,6 @@
 import React, { useTimeout, useState, Fragment } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { endpoints } from '../endpoints';
 import placeholder from '../assets/error.png';
 //import defaultScreenshot from './assets/Lake-McDonald.png';
@@ -7,21 +8,21 @@ import placeholder from '../assets/error.png';
 import '../css/Video.css';
 
 const Video = ({ video }) => {
-  console.log('video', video)
+  let defaultImg = placeholder;
 
-  let defaultImg = video.images[0];
-
-  console.log('defaultImg', defaultImg)
+  if (video.images.length) {
+    defaultImg = video.images[0];
+  }
 
   return (
-    <>
-      <iframe
-        title={video.title}
-        src={video.url}
-        value={video.url}
-      />
-    </>
+    <Link to="`/${video.id}`" >
+      <img src={defaultImg} alt={video.title}/>
+    </Link>
   );
 }
 
 export default Video;
+
+Video.propTypes = {
+  video: PropTypes.object
+};

@@ -1,5 +1,6 @@
-import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+//import { BrowserRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Video from '../components/Video';
 import Error from './Error';
 import Loading from './Loading';
@@ -8,31 +9,33 @@ import { endpoints } from '../endpoints.js';
 import '../css/VideosContainer.css';
 
 const VideosContainer = ({ searchTerm }) => {
-  console.log(`${endpoints.base}${endpoints.search}${searchTerm}${endpoints.limit}${endpoints.apiKey}`);
+  const string = `${encodeURIComponent(searchTerm.trim())}`;
 
-  const { dataState, isLoadingState, errorState } = useFetch(`${endpoints.base}${endpoints.search}${searchTerm}${endpoints.limit}${endpoints.apiKey}`);
+  console.log(`${endpoints.base}${endpoints.search}${string}${endpoints.apiKey}`);
 
-  console.log('videoscontainer videos', dataState)
+  const { dataState: webcams, isLoadingState, errorState } = useFetch(`${endpoints.base}${endpoints.search}${string}${endpoints.apiKey}`);
+
+  console.log('videoscontainer', webcams, isLoadingState, errorState)
 
   const getActiveVideos = () => {
-    const activeVideos = dataState.data.filter(webcam => webcam.status === 'Active').map(webcam => {
+    const activeVideos = webcams.data.filter(webcam => webcam.status === 'Active').map(webcam => {
         return <Video video={webcam} />
       })
     return activeVideos;
   }
 
-  const getStreamingVideos = () => {
-    const streamingVideos = dataState.data.filter(webcam => webcam.isStreaming).map(webcam => {
-        return <Video video={webcam} />
-      })
-    return streamingVideos;
-  }
+  // const getStreamingVideos = () => {
+  //   const streamingVideos = webcams.data.filter(webcam => webcam.isStreaming).map(webcam => {
+  //       return <Video video={webcam} />
+  //     })
+  //   return streamingVideos;
+  // }
 
   return (
     <>
       {isLoadingState && <Loading />}
       {errorState && <Error error={errorState} />}
-      {getStreamingVideos()}
+      {getActiveVideos()}
     </>
   );
 }
@@ -53,3 +56,7 @@ const VideosContainer = ({ searchTerm }) => {
 */
 
 export default VideosContainer;
+
+VideosContainer.propTypes = {
+  searchTerm: PropTypes.string
+};

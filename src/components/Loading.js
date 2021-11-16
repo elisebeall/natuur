@@ -5,7 +5,7 @@ import '../css/Loading.css';
 const Loading = () => {
   return (
     <>
-      <img src={loadingImage} alt="Loading Image: " />
+      <img src={loadingImage} alt="loading" />
       <h3>Please stand by...</h3>
     </>
   );
