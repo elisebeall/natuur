@@ -1,13 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import useFetch from './useFetch';
+import React from 'react';
 import Header from './components/Header';
 import Search from './components/Search';
-// import Error from './components/Error';
-// import Loading from './components/Loading';
-// import VideosContainer from './components/VideosContainer';
+import DefaultVideos from './components/DefaultVideos';
 import Footer from './components/Footer';
-import natuurLogo from './assets/natuur-logo.png';
 import './App.css';
 
 const App = () => {

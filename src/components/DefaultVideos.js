@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, setTimeout } from 'react';
 //import { BrowserRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Video from '../components/Video';
@@ -12,13 +12,11 @@ const DefaultVideos = () => {
   const string = "Colorado";
   const { dataState: defaultVids, isLoadingState, errorState } = useFetch(`${endpoints.base}${endpoints.search}${string}${endpoints.apiKey}`);
 
-  console.log('DefaultVideos', defaultVids, isLoadingState, errorState)
-
   return (
     <>
       {isLoadingState && <Loading />}
       {errorState && <Error error={errorState} />}
-      {deafultVids.map(video => <Video videos={video} />)}
+      {defaultVids.data.map(video => <Video videos={video} />)}
     </>
   );
 }
