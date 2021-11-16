@@ -15,6 +15,7 @@ const App = () => {
     <main className="app">
       <Header className="header" />
       <Search className="search" />
+      <DefaultVideos className="defaultVids" />
       <Footer className="footer" />
     </main>
   );
