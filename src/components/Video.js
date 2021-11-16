@@ -1,27 +1,28 @@
 import React, { useTimeout, useState, Fragment } from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import endpoints from './endpoints';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { endpoints } from '../endpoints';
+import placeholder from '../assets/error.png';
 //import defaultScreenshot from './assets/Lake-McDonald.png';
 //<img src={defaultScreenshot} alt="Lake-McDonald"/>
-import './components/Video.css';
+import '../css/Video.css';
 
-const Video = (video) => {
-  const [currentVideoState, setCurrentVideoState] = useState(null);
+const Video = ({ video }) => {
+  let defaultImg = placeholder;
 
-  useTimeout(() => {
-    setCurrentVideoState(video);
-  }, 60000);
+  if (video.images.length) {
+    defaultImg = video.images[0];
+  }
 
   return (
-    <>
-      <iframe
-        src={currentVideoState.url}
-        value={currentVideoState.url}
-        height="100%"
-        width="100%"
-      />
-    </>
+    <Link to="`/${video.id}`" >
+      <img src={defaultImg} alt={video.title}/>
+    </Link>
   );
 }
 
 export default Video;
+
+Video.propTypes = {
+  video: PropTypes.object
+};
